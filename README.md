@@ -7,4 +7,6 @@
 ## Note
 
 ## Homework
-
+[HW1_python](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW1/app.py)
+[HW1_HTML]()
+[HW1_discription]()
