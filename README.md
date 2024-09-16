@@ -7,8 +7,6 @@
 ## Note
 
 ## Homework
-[HW1_python](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW1/app.py)
+[HW1 program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW1)
 
-[HW1_HTML]()
-
-[HW1_discription]()
+[HW1_discription](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW1/Homework%201.pdf)
