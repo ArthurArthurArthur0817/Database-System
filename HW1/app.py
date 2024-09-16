@@ -31,7 +31,7 @@ def insert_data(name, age, city):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
@@ -56,7 +56,7 @@ def update_data(id, name, age, city):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
@@ -77,7 +77,7 @@ def delete_data(id):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
