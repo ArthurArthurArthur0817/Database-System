@@ -10,7 +10,7 @@ def get_data():
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
