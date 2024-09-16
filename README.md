@@ -7,6 +7,9 @@
 ## Note
 
 ## Homework
+
+### HW1
+
 [HW1 program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW1)
 
 [HW1_discription](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW1/Homework%201.pdf)
