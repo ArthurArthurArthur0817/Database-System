@@ -18,4 +18,4 @@
 
 ### HW2
 
-[HW2_ER Diagram]()
+[HW2_ER Diagram](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW2/Entity%20Relationship%20Diagram%20.png)
