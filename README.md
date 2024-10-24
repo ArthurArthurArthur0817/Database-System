@@ -15,3 +15,7 @@
 [HW1_discription](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW1/Homework%201.pdf)
 
 [HW1_Video](https://youtu.be/D8i0SQLk45Y)
+
+### HW2
+
+[HW2_ER Diagram]()
