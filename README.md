@@ -19,3 +19,5 @@
 ### HW2
 
 [HW2_ER Diagram](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW2/Entity%20Relationship%20Diagram%20.png)
+
+[HW2_Video](https://youtu.be/riVM1c_Aydc?si=mxW6XBEI785M_MpB)
