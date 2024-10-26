@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .actions button {
+            background-color: #28a745;
+        }
+        .actions button.delete {
+            background-color: #dc3545;
+        }
+        .actions form {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Management</h1>
+
+    <div class="container">
+        <!-- Form to Add New Data -->
+        <div class="form-section">
+            <h2>Add New Record</h2>
+            <form action="/add" method="POST">
+                <label for="table">Select Table:</label>
+                <select name="table" id="table" required>
+                    <option value="users">Users</option>
+                    <option value="products">Products</option>
+                    <option value="countries">Countries</option>
+                </select>
+
+                <label for="id">ID:</label>
+                <input type="number" name="id" id="id" required>
+
+                <label for="value">Value:</label>
+                <input type="text" name="value" id="value" required>
+
+                <button type="submit">Add Data</button>
+            </form>
+        </div>
+
+        <!-- Display Current Data -->
+        <h2>Current Data in Tables</h2>
+
+        <h3>Users</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in users %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.user_name }}</td>
+                    <td class="actions">
+                        <form action="/update/users/{{ row.id }}" method="POST">
+                            <input type="text" name="value" value="{{ row.user_name }}" required>
+                            <button type="submit">Update</button>
+                        </form>
+                        <form action="/delete/users/{{ row.id }}" method="POST">
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Repeat the above structure for Products and Countries tables -->
+        <!-- Products -->
+        <h3>Products</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in products %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.product_name }}</td>
+                    <td class="actions">
+                        <form action="/update/products/{{ row.id }}" method="POST">
+                            <input type="text" name="value" value="{{ row.product_name }}" required>
+                            <button type="submit">Update</button>
+                        </form>
+                        <form action="/delete/products/{{ row.id }}" method="POST">
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Countries -->
+        <h3>Countries</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Country Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in countries %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.country_name }}</td>
+                    <td class="actions">
+                        <form action="/update/countries/{{ row.id }}" method="POST">
+                            <input type="text" name="value" value="{{ row.country_name }}" required>
+                            <button type="submit">Update</button>
+                        </form>
+                        <form action="/delete/countries/{{ row.id }}" method="POST">
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Button to Generate Join -->
+        <div class="form-section">
+            <h2>Generate Plot (Join Data)</h2>
+            <a href="/join">
+                <button type="button">Generate Plot</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
