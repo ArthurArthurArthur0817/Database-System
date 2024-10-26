@@ -22,4 +22,4 @@
 
 [HW2_Video](https://youtu.be/riVM1c_Aydc?si=mxW6XBEI785M_MpB)
 
-[HW2_program](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW2)
+[HW2_program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW2)
