@@ -28,3 +28,6 @@ result of inner join
 
 <img width="542" alt="image" src="https://github.com/user-attachments/assets/781aa6c4-d541-449e-a6b8-17566cfd704a">
 
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/b58618fb-65f6-49e5-a047-40bb0994ced1">
+
+
