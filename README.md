@@ -25,5 +25,6 @@
 [HW2_program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW2)
 
 result of inner join
+
 <img width="542" alt="image" src="https://github.com/user-attachments/assets/781aa6c4-d541-449e-a6b8-17566cfd704a">
 
