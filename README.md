@@ -23,4 +23,7 @@
 [HW2_Video](https://youtu.be/riVM1c_Aydc?si=mxW6XBEI785M_MpB)
 
 [HW2_program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW2)
-[result of inner join](https://github.com/ArthurArthurArthur0817/Database-System/blob/main/HW2/inner_join.png)
+
+result of inner join
+<img width="542" alt="image" src="https://github.com/user-attachments/assets/781aa6c4-d541-449e-a6b8-17566cfd704a">
+
