@@ -7,7 +7,7 @@ def get_data(table_name):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
@@ -30,7 +30,7 @@ def insert_data(table_name, id, value):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
@@ -56,7 +56,7 @@ def delete_data(table_name, id):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
@@ -77,7 +77,7 @@ def join_tables():
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
@@ -104,7 +104,7 @@ def update_data(table_name, id, value):
         connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Ab271642",
+            password="",
             database="my_database",
             port=3307
         )
