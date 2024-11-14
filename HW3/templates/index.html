@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料管理系統</title>
+    <style>
+        /* 全局樣式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #eef2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 標題樣式 */
+        h1 {
+            color: #5a5a5a;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        /* 表單樣式 */
+        .form-container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .form-container h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #43a047;
+        }
+
+        /* 表格樣式 */
+        .table-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .data-table thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .data-table th, .data-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .data-table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* 按鈕樣式 */
+        .edit-btn, .delete-btn {
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .edit-btn {
+            background-color: #ff9800;
+            margin-right: 5px;
+        }
+        .delete-btn {
+            background-color: #f44336;
+        }
+        .edit-btn:hover {
+            background-color: #e68900;
+        }
+        .delete-btn:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>資料管理系統</h1>
+
+    <!-- 新增資料的表單 -->
+    <div class="form-container">
+        <h2>新增資料</h2>
+        <form action="/add" method="post">
+            <label for="name">名稱</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">年齡</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="occupation">職業</label>
+            <input type="text" id="occupation" name="occupation" required>
+
+            <button type="submit">新增資料</button>
+        </form>
+    </div>
+
+    <!-- 顯示資料表格 -->
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>名稱</th>
+                    <th>年齡</th>
+                    <th>職業</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.age }}</td>
+                    <td>{{ item.occupation }}</td>
+                    <td>
+                        <!-- 編輯表單 -->
+                        <form action="/edit/{{ item._id }}" method="post" style="display:inline;">
+                            <input type="text" name="name" class="inline-input" value="{{ item.name }}" required>
+                            <input type="number" name="age" class="inline-input" value="{{ item.age }}" required>
+                            <input type="text" name="occupation" class="inline-input" value="{{ item.occupation }}" required>
+                            <button type="submit" class="edit-btn">編輯</button>
+                        </form>
+                        <!-- 刪除表單 -->
+                        <form action="/delete/{{ item._id }}" method="post" style="display:inline;">
+                            <button type="submit" class="delete-btn">刪除</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
