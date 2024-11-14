@@ -36,7 +36,7 @@ Project
 
 ### HW3
 
-[HW3 program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW1)
+[HW3 program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW3)
 
 [HW3_Video](https://youtu.be/fJDqRf0H1ME)
 
