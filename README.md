@@ -34,4 +34,10 @@ Project
 
 <img width="818" alt="image" src="https://github.com/user-attachments/assets/b58618fb-65f6-49e5-a047-40bb0994ced1">
 
+### HW3
+
+[HW3 program folder](https://github.com/ArthurArthurArthur0817/Database-System/tree/main/HW1)
+
+[HW3_Video](https://youtu.be/fJDqRf0H1ME)
+
 
